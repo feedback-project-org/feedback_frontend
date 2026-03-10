@@ -46,7 +46,7 @@ If backend is not running, complaints data may not load.
 git clone https://github.com/prawin0614/feedback_frontend.git
 cd complaint-frontend
 npm install
-npm start
+npm run start:dev
 
 Frontend runs at:
 http://localhost:3000
