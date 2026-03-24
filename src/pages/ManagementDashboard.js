@@ -73,6 +73,44 @@ export default function ManagementDashboard() {
       }
     }
   };
+   const handleDownloadCsv = () => {
+    if (!Array.isArray(complaints) || complaints.length === 0) {
+      toast.info("No complaints to export. Click Refresh first.");
+      return;
+    }
+
+    const escapeCsv = (value) => {
+      if (value === null || value === undefined) return "";
+      const str = String(value);
+      const mustQuote = /[",\n\r]/.test(str);
+      const escaped = str.replace(/"/g, '""');
+      return mustQuote ? `"${escaped}"` : escaped;
+    };
+
+    const headers = ["id", "studentName", "complaintType", "description", "status"];
+    const rows = complaints.map((c) => [
+      escapeCsv(c?.id),
+      escapeCsv(c?.studentName),
+      escapeCsv(c?.complaintType),
+      escapeCsv(c?.description),
+      escapeCsv(c?.status),
+    ]);
+
+    const csv = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+
+    const date = new Date().toISOString().slice(0, 10);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `complaints-${date}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="management-dashboard">
@@ -87,6 +125,15 @@ export default function ManagementDashboard() {
             disabled={loading}
           >
             {loading ? "Refreshing..." : "Refresh"}
+          </button>
+             <button
+            type="button"
+            className="refresh-btn"
+            onClick={handleDownloadCsv}
+            disabled={loading}
+            style={{ marginLeft: 10 }}
+          >
+            Download CSV
           </button>
             
         </div>
