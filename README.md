@@ -1,66 +1,80 @@
-# Complaint Management System – Frontend
 
-This is the **React frontend** for the Complaint Management System.  
-It allows students to submit complaints and management to view/update them.
+# Smart Complaint Management System
 
----
+## About the Project
 
-## 🚀 Live Frontend URL (Vercel)
+The Smart Complaint Management System is a full-stack web application developed using Java, Spring Boot, React, and H2 Database. It is designed to provide a digital platform for recording and managing complaints instead of relying entirely on manual records.
 
-👉 https://feedback-frontend-ochre.vercel.app/ (Mangement Page Password = 2006)
+The application demonstrates full-stack development, backend API development, database integration, and cloud deployment using Microsoft Azure.
 
----
-
-## ⚠️ Important Usage Note
-
-This frontend **depends on the backend service**.
-
-👉 **Before using the frontend:**
-1. Open the backend URL once  
-   https://feedback-backend-u96e.onrender.com
-2. Wait for the backend to start (Render Free Plan may take 30–60 seconds)
-3. Then open the frontend URL
-
-If backend is not running, complaints data may not load.
-
----
-## 📊 Project Presentation
-
-👉 [Download Project PPT](https://github.com/prawin0614/feedback_frontend/blob/main/Complaint-Management-System.pptx)
+liveapp:https://feedback-frontend-app-gmdwa5a5f9b5fme8.centralindia-01.azurewebsites.net/
 
 
-## 🛠️ Tech Stack
+managementpage password:2006
 
-- React
-- Axios
-- HTML / CSS
-- JavaScript
-- Vercel (Deployment)
-- SonarCloud
+## Technologies Used
 
----
+- **Java:** Implements backend application logic.
+- **Spring Boot:** Develops the backend and REST APIs.
+- **H2 Database:** Stores application data in a lightweight SQL database.
+- **React.js:** Builds the interactive frontend user interface.
+- **Microsoft Azure:** Hosts the application in the cloud.
+- **SonarQube:** Supports code quality analysis.
 
-## ▶️ Run Locally
+## Project Architecture
 
-```bash
-git clone https://github.com/prawin0614/feedback_frontend.git
-cd complaint-frontend
-npm install
-npm run start:dev
+React Frontend → Spring Boot REST APIs → H2 Database
 
-Frontend runs at:
-http://localhost:3000
+## Key Uses
 
-🔍 SonarCloud
+- Digitize complaint recording and management.
+- Reduce reliance on manual complaint registers and paperwork.
+- Provide a web-based interface for interacting with the application.
+- Connect frontend components with backend services through APIs.
+- Store application records in a relational database.
+- Demonstrate cloud-based application deployment.
 
-SonarCloud analysis configured
+## Technology Benefits
 
-Quality Gate passed successfully ✅
+### Java and Spring Boot
+Provides a structured backend for implementing application logic and building REST APIs.
 
-🔗 Backend
+### H2 Database
+Provides a lightweight database that is convenient for development, testing, and demonstrations without requiring a separate database server.
 
-👉 Backend Repository:
-https://github.com/prawin0614/feedback-backend
+### React.js
+Supports reusable UI components and a responsive, interactive user experience.
 
-👉 Live Backend URL:
-https://feedback-backend-u96e.onrender.com
+### Microsoft Azure
+Makes the application accessible over the internet when deployed and configured correctly.
+
+### SonarQube
+Helps identify potential code-quality issues and maintainability concerns.
+
+## Skills Demonstrated
+
+- Full-stack web development
+- Java programming
+- Spring Boot application development
+- REST API integration
+- SQL database integration
+- React frontend development
+- Cloud deployment fundamentals
+- Code quality analysis
+
+## Future Enhancements
+
+- User authentication and role-based access
+- Complaint status tracking
+- Search and filtering
+- Administrative dashboard and reporting
+- Notifications for complaint updates
+
+*Note: Future enhancements are proposed improvements, not confirmed existing features.*
+
+## Author
+
+**Prawin A**
+
+- GitHub: https://github.com/prawin0614
+- Portfolio: https://portfolio-drab-seven-63.vercel.app/
